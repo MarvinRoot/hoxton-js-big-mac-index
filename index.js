@@ -31,6 +31,19 @@ let indexRateINRandUSD = ((PPPUsAndIndia - INRandUSD)/INRandUSD)*100;
 let indexRateTRYandUSD = ((PPPUsAndTurkey - TRYandUSD)/TRYandUSD)*100;
 let indexRateUAHandUSD = ((PPPUsAndUkraine - UAHandUSD)/UAHandUSD)*100;
 
+//Console.log outputs the index values
 
 console.log=("The list of indexes: respectively CHF to US, SEK to USD, INR to USD, TRY to USD and UAH to USD"
 + indexRateCHFandUSD +' '+ indexRateSEKandUSD +' '+ indexRateINRandUSD +' '+ indexRateTRYandUSD +' '+ indexRateUAHandUSD);
+
+//Some boolean comparisons
+
+let compareCHFindexAndSEKindex = Boolean(indexRateCHFandUSD>indexRateSEKandUSD);
+console.log=("Is the CHF against USD index larger than the SEK against USD index?" + compareCHFindexAndSEKindex);
+
+let compareCHFindexAndTRYindex = Boolean(indexRateCHFandUSD>indexRateTRYandUSD);
+console.log=("Is the CHF against USD index larger than the TRY against USD index?" + compareCHFindexAndTRYindex);
+
+let compareINRindexAndUAHindex = Boolean(indexRateINRandUSD>indexRateUAHandUSD);
+console.log=("Is the INR against USD index larger than the UAH against USD index?" + compareINRindexAndUAHindex);
+
